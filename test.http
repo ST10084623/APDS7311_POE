@@ -1,0 +1,46 @@
+GET http://localhost:5050 HTTP/1.1
+###
+GET https://localhost:5050 HTTP/1.1
+###
+GET https://localhost:5050/record HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXNzd29yZCI6InlvdXdpbGxuZXZlcmd1ZXNzIiwiaWF0IjoxNjk2NjI0MzA0LCJleHAiOjE2OTY2Mjc5MDR9.zQZ0Dp4oCF8g0eWNQQoCb0dwW_HMaebVLWW8Ikm_GZQ
+###
+POST https://localhost:5050/user/signup HTTP/1.1
+content-Type: application/json
+
+{
+    "name": "hailey",
+    "password": "youwillneverguess"
+}
+
+###
+POST https://localhost:5050/user/login HTTP/1.1
+content-Type: application/json
+
+{
+    "name": "hailey",
+    "password": "youwillneverguess"
+}
+
+###
+POST https://localhost:5050/record HTTP/1.1
+content-Type: application/json
+
+{
+    "name": "record"
+}
+
+###
+POST https://localhost:5050/record/create HTTP/1.1
+content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXNzd29yZCI6InlvdXdpbGxuZXZlcmd1ZXNzIiwiaWF0IjoxNjk2ODQ1MzExLCJleHAiOjE2OTY4NDg5MTF9.YrgQIwcmXrMbDF09j92ISFd0bMkE4XAqsRBVf_F8JRg
+
+{
+    "name": "I have been created"
+}
+
+###
+DELETE  https://localhost:5050/record/6525803980d614ef65161956 HTTP/1.1
+content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXNzd29yZCI6InlvdXdpbGxuZXZlcmd1ZXNzIiwiaWF0IjoxNjk2NjIzODgzLCJleHAiOjE2OTY2Mjc0ODN9.DbCJ0lguVUNyv-Fb4V8C5uVbo9Gv-y33S5LVdpEKOfw
+//65206d3d76263d2378795c4a
